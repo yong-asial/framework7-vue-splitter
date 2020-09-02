@@ -33,3 +33,6 @@ node_modules/
 # Misc
 .DS_Store
 Thumbs.db
+
+# Hot Reload
+www/hot/*

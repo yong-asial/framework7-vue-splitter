@@ -15,8 +15,9 @@ function resolvePath(dir) {
 
 const env = process.env.NODE_ENV || 'development';
 const target = process.env.TARGET || 'web';
-
-
+const host = process.env.MONACA_SERVER_HOST || '0.0.0.0';
+const DEFAULT_PORT = 8080;
+const port = process.env.PORT || DEFAULT_PORT;
 
 module.exports = {
   mode: env,
@@ -41,9 +42,12 @@ module.exports = {
   },
   devtool: env === 'production' ? 'source-map' : 'eval',
   devServer: {
+    host: host,
     hot: true,
     open: true,
     compress: true,
+    port: port,
+    sockPort: port,
     contentBase: '/www/',
     disableHostCheck: true,
     historyApiFallback: true,
