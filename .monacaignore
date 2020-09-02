@@ -44,3 +44,4 @@ www/hot/*
 /platforms
 .vscode/
 typings/
+.git
