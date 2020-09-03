@@ -197,6 +197,9 @@ module.exports = {
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
+        caseSensitive: true,
+        conservativeCollapse: true,
+        removeAttributeQuotes: true,
         useShortDoctype: true
       } : false,
     }),
